@@ -1,0 +1,7 @@
+{
+  "alert_id": "A-002",
+  "customer_id": "C-104",
+  "rule": "RAPID-MOVEMENT",
+  "summary": "Large inbound transfers followed by outbound transfers within 24 hours",
+  "date": "2026-10-09"
+}

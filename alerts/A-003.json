@@ -1,0 +1,7 @@
+{
+  "alert_id": "A-003",
+  "customer_id": "C-105",
+  "rule": "HIGH-RISK-GEO",
+  "summary": "Repeated transfers to a counterparty in a high-risk jurisdiction",
+  "date": "2026-10-09"
+}

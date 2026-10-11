@@ -1,0 +1,7 @@
+{
+  "alert_id": "A-008",
+  "customer_id": "C-107",
+  "rule": "HIGH-RISK-GEO",
+  "summary": "Large outbound transfers to a high-risk jurisdiction",
+  "date": "2026-10-09"
+}

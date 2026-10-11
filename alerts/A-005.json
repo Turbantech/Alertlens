@@ -1,0 +1,7 @@
+{
+  "alert_id": "A-005",
+  "customer_id": "C-103",
+  "rule": "LARGE-TRANSFER-OUT",
+  "summary": "Single outbound transfer above AED 150,000",
+  "date": "2026-10-09"
+}

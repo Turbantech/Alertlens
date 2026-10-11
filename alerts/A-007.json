@@ -1,0 +1,7 @@
+{
+  "alert_id": "A-007",
+  "customer_id": "C-106",
+  "rule": "CASH-NEAR-THRESHOLD",
+  "summary": "Multiple cash deposits just below AED 10,000",
+  "date": "2026-10-09"
+}

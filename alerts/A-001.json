@@ -1,0 +1,7 @@
+{
+  "alert_id": "A-001",
+  "customer_id": "C-102",
+  "rule": "CASH-NEAR-THRESHOLD",
+  "summary": "12 cash deposits of AED 9,500 in 5 days (reporting threshold AED 10,000)",
+  "date": "2026-10-09"
+}

@@ -1,0 +1,7 @@
+{
+  "alert_id": "A-006",
+  "customer_id": "C-103",
+  "rule": "REPEAT-COUNTERPARTY",
+  "summary": "Repeated outbound transfers to the same counterparty",
+  "date": "2026-10-09"
+}

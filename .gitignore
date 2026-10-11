@@ -1,0 +1,8 @@
+.env
+.venv/
+chroma_db/
+decisions.log
+__pycache__/
+*.pyc
+evals/results_*.json
+test_mcp.py

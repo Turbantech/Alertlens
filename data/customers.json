@@ -1,0 +1,72 @@
+[
+  {
+    "customer_id": "C-101",
+    "name": "Gulf Fresh Groceries LLC",
+    "business_type": "Retail grocery",
+    "account_age_months": 74,
+    "expected_monthly_turnover": 60000,
+    "country": "UAE",
+    "risk_rating": "LOW",
+    "pep": false
+  },
+  {
+    "customer_id": "C-102",
+    "name": "Marwan Al Hadi Trading",
+    "business_type": "General trading (small)",
+    "account_age_months": 16,
+    "expected_monthly_turnover": 40000,
+    "country": "UAE",
+    "risk_rating": "MEDIUM",
+    "pep": false
+  },
+  {
+    "customer_id": "C-103",
+    "name": "Horizon Logistics FZE",
+    "business_type": "Freight and logistics",
+    "account_age_months": 58,
+    "expected_monthly_turnover": 250000,
+    "country": "UAE",
+    "risk_rating": "LOW",
+    "pep": false
+  },
+  {
+    "customer_id": "C-104",
+    "name": "Nimbus Imports LLC",
+    "business_type": "Electronics import",
+    "account_age_months": 8,
+    "expected_monthly_turnover": 80000,
+    "country": "UAE",
+    "risk_rating": "MEDIUM",
+    "pep": false
+  },
+  {
+    "customer_id": "C-105",
+    "name": "Caspian Star General Trading",
+    "business_type": "Commodity trading",
+    "account_age_months": 22,
+    "expected_monthly_turnover": 150000,
+    "country": "UAE",
+    "risk_rating": "HIGH",
+    "pep": false
+  },
+  {
+    "customer_id": "C-106",
+    "name": "Falcon Ridge Consulting",
+    "business_type": "Management consulting",
+    "account_age_months": 11,
+    "expected_monthly_turnover": 30000,
+    "country": "UAE",
+    "risk_rating": "MEDIUM",
+    "pep": false
+  },
+  {
+    "customer_id": "C-107",
+    "name": "Oryx Meridian Trading",
+    "business_type": "Shipping agency",
+    "account_age_months": 14,
+    "expected_monthly_turnover": 120000,
+    "country": "UAE",
+    "risk_rating": "MEDIUM",
+    "pep": false
+  }
+]

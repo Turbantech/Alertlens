@@ -1,0 +1,7 @@
+{
+  "alert_id": "A-004",
+  "customer_id": "C-101",
+  "rule": "CASH-VOLUME-SPIKE",
+  "summary": "Monthly cash deposits 70% above 6-month average",
+  "date": "2026-10-09"
+}

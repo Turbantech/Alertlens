@@ -1,0 +1,11 @@
+langchain
+langchain-openai
+langgraph
+langchain-mcp-adapters
+fastmcp
+chromadb
+openai
+pydantic>=2
+streamlit
+python-dotenv
+pysqlite3-binary; sys_platform == "linux"
