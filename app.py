@@ -6,7 +6,8 @@ try:  # Streamlit Cloud ships an old sqlite; swap in a newer one for Chroma
 except ImportError:
     pass  # local Windows: not needed
 import json
-from datetime import datetime
+import time
+from datetime import datetime,date
 from pathlib import Path
 import streamlit as st
 try:  # Streamlit Cloud: copy secrets into env vars so the rest of the code works unchanged
@@ -47,6 +48,24 @@ def setup():
     rag.ingest()          # idempotent, so safe to call once per server start
     return True
 setup()
+MAX_PER_SESSION, MAX_PER_DAY, COOLDOWN_S = 20, 100, 5
+
+@st.cache_resource
+def usage():
+    return {"day": date.today(), "count": 0}   # shared by every visitor on this server
+
+def limit_message():
+    """Returns a message if the user is over a limit, else None."""
+    u, s = usage(), st.session_state
+    if u["day"] != date.today():
+        u.update(day=date.today(), count=0)
+    if s.get("n", 0) >= MAX_PER_SESSION:
+        return f"Session limit reached ({MAX_PER_SESSION} investigations)."
+    if time.time() - s.get("last", 0) < COOLDOWN_S:
+        return f"Please wait {COOLDOWN_S}s between investigations."
+    if u["count"] >= MAX_PER_DAY:
+        return "Daily demo limit reached. Try again tomorrow."
+    return None
 
 st.markdown('<div class="banner">Decision support on synthetic data. '
             'A human makes the final decision.</div>', unsafe_allow_html=True)
@@ -68,11 +87,18 @@ with left:
     with st.expander("Raw alert JSON"):
         st.json(alert)
     if st.button("Investigate", type="primary", use_container_width=True):
-        with st.spinner("Agent investigating..."):
-            try:
-                results[chosen] = investigate(alert)
-            except Exception as e:
-                st.error(f"Investigation failed: {e}")
+        msg = limit_message()
+        if msg:
+            st.warning(msg)
+        else:
+            st.session_state["n"] = st.session_state.get("n", 0) + 1
+            st.session_state["last"] = time.time()
+            usage()["count"] += 1
+            with st.spinner("Agent investigating..."):
+                try:
+                    results[chosen] = investigate(alert)
+                except Exception as e:
+                    st.error(f"Investigation failed: {e}")
 
 with right:
     st.subheader("Investigation memo")
