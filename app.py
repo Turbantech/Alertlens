@@ -20,7 +20,7 @@ import rag
 from agent import investigate
 
 ROOT = Path(__file__).parent
-st.set_page_config(page_title="AlertLens", layout="wide")
+st.set_page_config(page_title="AlertLens: Evidence-Backed AML Investigations", layout="wide")
 
 # ---- custom CSS (delete this block for the plain version) ----
 st.markdown("""
@@ -67,9 +67,9 @@ def limit_message():
         return "Daily demo limit reached. Try again tomorrow."
     return None
 
-st.markdown('<div class="banner">Decision support on synthetic data. '
-            'A human makes the final decision.</div>', unsafe_allow_html=True)
+st.info("Decision support on synthetic data. A human makes the final decision.")
 st.title("AlertLens")
+st.caption("Evidence-Backed AML Investigations")
 
 alerts = {p.stem: json.loads(p.read_text(encoding="utf-8"))
           for p in sorted((ROOT / "alerts").glob("A-*.json"))}

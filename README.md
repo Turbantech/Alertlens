@@ -4,7 +4,7 @@ AlertLens helps a (fictional) bank's AML analysts triage transaction-monitoring 
 
 > Alerts are simulated. In production this would integrate with the bank's transaction monitoring and case management systems.
 
-**Live demo:** <your Streamlit URL> (private, synthetic data only)
+**Live demo:** https://alertlens.streamlit.app/ (private, synthetic data only)
 
 ## Architecture
 
